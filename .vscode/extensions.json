@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "leanprover.lean4",
-    "usernamehw.errorlens"
+    "leanprover.lean4"
   ]
 }
