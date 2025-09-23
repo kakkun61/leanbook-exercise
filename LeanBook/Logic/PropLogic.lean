@@ -99,3 +99,43 @@ example (P Q R : Prop) : P ∧ (Q ∨ R) → (P ∧ Q) ∨ (P ∧ R) := by
     constructor
     · exact h.left
     · exact hr
+
+example
+  (P Q R S : Prop) :
+  (P ∧ R) ∨ (P ∧ S) ∨ (Q ∧ R) ∨ (Q ∧ S) → (P ∨ Q) ∧ (R ∨ S) := by
+  intro hyp
+  constructor
+  · cases hyp with
+    | inl hyp' =>
+      left
+      exact hyp'.left
+    | inr hyp' =>
+      cases hyp' with
+      | inl hyp'' =>
+        left
+        exact hyp''.left
+      | inr hyp'' =>
+        cases hyp'' with
+        | inl hyp''' =>
+          right
+          exact hyp'''.left
+        | inr hyp''' =>
+          right
+          exact hyp'''.left
+  · cases hyp with
+    | inl hyp' =>
+      left
+      exact hyp'.right
+    | inr hyp' =>
+      cases hyp' with
+      | inl hyp'' =>
+        right
+        exact hyp''.right
+      | inr hyp'' =>
+        cases hyp'' with
+        | inl hyp''' =>
+          left
+          exact hyp'''.right
+        | inr hyp''' =>
+          right
+          exact hyp'''.right
