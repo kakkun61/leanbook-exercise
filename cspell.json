@@ -6,6 +6,9 @@
     ".gitignore"
   ],
   "words": [
-    "succ"
+    "elim",
+    "noncomputable",
+    "succ",
+    "surjective"
   ]
 }
