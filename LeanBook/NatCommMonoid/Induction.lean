@@ -20,7 +20,7 @@ example (m n : MyNat) (h : m + 0 = n) : n + m = m + n := by
 theorem MyNat.add_succ (m n : MyNat) : m + .succ n = .succ (m + n) := by
   rfl
 
-example (n : MyNat) : 0 + n = n := by
+theorem MyNat.zero_add (n : MyNat) : 0 + n = n := by
   induction n with
   | zero => rfl
   | succ n' ih =>
