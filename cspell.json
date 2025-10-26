@@ -6,9 +6,13 @@
     ".gitignore"
   ],
   "words": [
+    "distrib",
+    "dsimp",
     "elim",
     "Monoid",
+    "Mult",
     "noncomputable",
+    "Semiring",
     "succ",
     "surjective"
   ]
