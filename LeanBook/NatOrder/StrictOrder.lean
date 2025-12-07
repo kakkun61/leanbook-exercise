@@ -37,3 +37,41 @@ theorem MyNat.le_zero {n : MyNat} : n ≤ 0 ↔ n = 0 := by
     sorry
   · intro hyp_n_eq_zero
     sorry
+
+-- コード 6.26
+/-- 任意の自然数はゼロか正 -/
+theorem MyNat.eq_zero_or_pos (n : MyNat) : n = 0 ∨ 0 < n := by
+  sorry
+
+-- コード 6.27
+theorem MyNat.eq_or_lt_of_le {m n : MyNat} : n ≤ m → n = m ∨ n < m := by
+  sorry
+
+-- コード 6.28
+/-- 狭義関係は広義関係よりも「強い」 -/
+theorem MyNat.le_of_lt {a b : MyNat} (h : a < b) : a ≤ b := by
+  sorry
+
+theorem MyNat.le_of_eq_or_lt {m n : MyNat} : n = m ∨ n < m → n ≤ m := by
+  sorry
+
+-- コード 6.29 -/
+/-- 広義順序 ≤ は等号 = と狭義順序 < で書き換えられる -/
+theorem MyNat.le_iff_eq_or_lt {m n : MyNat} : n ≤ m ↔ n = m ∨ n < m := by
+  sorry
+
+-- コード 6.30
+theorem MyNat.lt_or_ge (a b : MyNat) : a < b ∨ b ≤ a := by
+  -- a < b を定義に従い a + 1 ≤ b に書き換える
+  dsimp [(· < ·), MyNat.lt]
+
+  induction a with
+  | zero => sorry
+  | succ a' ih => sorry
+
+-- コード 6.31
+theorem MyNat.lt_of_not_le {a b : MyNat} (h : ¬ a ≤ b) : b < a := by
+  sorry
+
+theorem MyNat.not_le_of_lt {a b : MyNat} (h : a < b) : ¬ b ≤ a := by
+  sorry
