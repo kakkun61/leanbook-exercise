@@ -1,3 +1,7 @@
+-- LeanBook/NatCommMonoid/Induction.lean
+-- 第4章 帰納法で、足し算の性質を証明する
+-- 4.2 帰納法で 0 + n = n を証明する
+
 import LeanBook.NatCommMonoid.TypeClass
 
 theorem MyNat.add_zero (n : MyNat) : n + 0 = n := by rfl

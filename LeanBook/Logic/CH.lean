@@ -1,3 +1,7 @@
+-- LeanBook/Logic/CH.lean
+-- 第3章 Lean における論理
+-- 3.6 カリー・ハワード同型対応
+
 /-- 1 + 1 = 2 という命題の証明 -/
 theorem one_add_one_eq_two : 1 + 1 = 2 := by
   rfl

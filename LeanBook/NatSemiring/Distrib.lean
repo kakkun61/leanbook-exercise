@@ -1,3 +1,6 @@
+-- LeanBook/NatSemiring/Distrib.lean
+-- 第5章 分配法則を証明し、マクロで再利用可能にする
+
 import LeanBook.NatSemiring.Mult
 
 /-- 分配法則を適用して足し算を式の外側に持ってくるタクティク -/

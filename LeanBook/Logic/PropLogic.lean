@@ -1,3 +1,7 @@
+-- LeanBook/Logic/PropLogic.lean
+-- 第3章 Lean における論理
+-- 3.1 命題論理
+
 #check true
 #check True
 

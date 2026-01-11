@@ -1,3 +1,7 @@
+-- LeanBook/NatOrder/OrderDef.lean
+-- 第6章 自然数の順序と、計算を利用する証明
+-- 6.2 順序を定義する
+
 import LeanBook.NatOrder.AddCancel
 
 /-- 自然数上の広義の順序関係 -/

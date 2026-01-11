@@ -1,3 +1,7 @@
+-- LeanBook/Logic/Tips.lean
+-- 第3章 Lean における論理
+-- 3.2 証明を楽にするコツ
+
 -- 3.2.5 練習問題
 example (P : Prop) : ¬ (P ↔ ¬ P) := by
   intro hyp_p_eq_not_p

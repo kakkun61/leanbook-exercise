@@ -1,3 +1,7 @@
+-- LeanBook/NatCommMonoid/BetterInduction.lean
+-- 第4章 帰納法で、足し算の性質を証明する
+-- 4.5 帰納法を改善する
+
 import LeanBook.NatCommMonoid.AcRfl
 
 #check MyNat.rec

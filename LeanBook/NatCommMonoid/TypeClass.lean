@@ -1,3 +1,7 @@
+-- LeanBook/NatCommMonoid/TypeClass.lean
+-- 第4章 帰納法で、足し算の性質を証明する
+-- 4.1 型クラスで見やすく綺麗に
+
 import LeanBook.FirstProof.NaturalNumber
 
 /-- Nat の項から対応する MyNat の項を得る

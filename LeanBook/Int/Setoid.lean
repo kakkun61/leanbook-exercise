@@ -1,3 +1,4 @@
+-- LeanBook/Int/Setoid.lean
 structure Point where
   x : Int
   y : Int

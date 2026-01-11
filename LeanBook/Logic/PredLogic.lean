@@ -1,3 +1,7 @@
+-- LeanBook/Logic/PredLogic.lean
+-- 第3章 Lean における論理
+-- 3.3 述語論理
+
 /-- 人間たちの集合 -/
 opaque Human : Type
 

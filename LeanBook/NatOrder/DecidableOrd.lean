@@ -1,3 +1,7 @@
+-- LeanBook/NatOrder/DecidableOrd.lean
+-- 第6章 自然数の順序と、計算を利用する証明
+-- 6.7 順序関係を決定可能にする
+
 import LeanBook.NatOrder.PartialOrder
 
 deriving instance DecidableEq for MyNat
@@ -8,19 +12,18 @@ deriving instance DecidableEq for MyNat
 def MyNat.ble (a b : MyNat) : Bool :=
   match a, b with
   | 0, _ => true
-  | _, 0 => false
+  | _ + 1, 0 => false
   | a' + 1, b' + 1 => MyNat.ble a' b'
 
+/- コード 6.62 -/
 #eval MyNat.ble 0 1
 
 #eval MyNat.ble 3 2
 
-instance (a b : MyNat) : Decidable (a ≤ b) := by
-  apply decidable_of_iff (MyNat.ble a b = true)
-  sorry
-
+/- コード 6.64 -/
 #check MyNat.ble.induct
 
+/- コード 6.65 -/
 @[simp]
 theorem MyNat.ble_zero_left (n : MyNat) : MyNat.ble 0 n = true := by
   rfl
@@ -33,6 +36,7 @@ theorem MyNat.ble_zero_right (n : MyNat) : MyNat.ble (n + 1) 0 = false := by
 theorem MyNat.ble_succ (m n : MyNat) : MyNat.ble (m + 1) (n + 1) = MyNat.ble m n := by
   rfl
 
+/- コード 6.66 -/
 def MyNat.ble.inductAux (motive : MyNat → MyNat → Prop)
     (case1 : ∀ (n : MyNat), motive 0 n)
     (case2 : ∀ (n : MyNat), motive (n + 1) 0)
@@ -43,6 +47,7 @@ def MyNat.ble.inductAux (motive : MyNat → MyNat → Prop)
   | case2 n => apply case2
   | case3 m n h => apply case3; assumption
 
+/- コード 6.67 -/
 theorem MyNat.le_impl (m n : MyNat) : MyNat.ble m n = true ↔ m ≤ n := by
   induction m, n using MyNat.ble.inductAux with
   | case1 n => simp

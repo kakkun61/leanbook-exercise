@@ -1,3 +1,7 @@
+-- LeanBook/Logic/Choice.lean
+-- 第3章 Lean における論理
+-- 3.5 選択原理
+
 #check Classical.em
 #print axioms Classical.em
 #check Classical.choice

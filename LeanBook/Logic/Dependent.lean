@@ -1,3 +1,7 @@
+-- LeanBook/Logic/Dependent.lean
+-- 第3章 Lean における論理
+-- 3.7 依存型
+
 inductive MyList (α : Type) : Type where
   | nil
   | cons (a : α) (l : List α)

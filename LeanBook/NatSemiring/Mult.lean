@@ -1,3 +1,7 @@
+-- LeanBook/NatSemiring/Mult.lean
+-- 第5章 分配法則を証明し、マクロで再利用可能にする
+-- 5.1 掛け算を定義して交換法則、結合法則、分配法則を示す
+
 import LeanBook.NatCommMonoid.BetterInduction
 
 /-- MyNat についての掛け算 -/

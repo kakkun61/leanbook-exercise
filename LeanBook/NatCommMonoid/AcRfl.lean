@@ -1,3 +1,7 @@
+-- LeanBook/NatCommMonoid/AcRfl.lean
+-- 第4章 帰納法で、足し算の性質を証明する
+-- 4.4 足し算の交換法則と結合法則を解放する
+
 import LeanBook.NatCommMonoid.Simp
 
 /-- 足し算の交換法則 -/

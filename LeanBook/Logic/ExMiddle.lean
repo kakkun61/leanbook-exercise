@@ -1,3 +1,7 @@
+-- LeanBook/Logic/ExMiddle.lean
+-- 第3章 Lean における論理
+-- 3.4 排中律と直観主義論理
+
 /-- 二重否定の除去 -/
 example (P : Prop) : ¬¬ P → P := by
   -- ¬¬ P だと仮定する

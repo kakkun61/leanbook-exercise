@@ -1,3 +1,7 @@
+-- LeanBook/NatCommMonoid/Simp.lean
+-- 第4章 帰納法で、足し算の性質を証明する
+-- 4.3 等式変形による単純化を自動化する
+
 import LeanBook.NatCommMonoid.Induction
 
 example (n : MyNat) : 0 + (n + 0) = n := by

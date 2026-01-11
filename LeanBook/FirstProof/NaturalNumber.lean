@@ -1,3 +1,7 @@
+-- LeanBook/FirstProof/NaturalNumber.lean
+-- 第 2 章 Lean による初めての証明
+-- 2.2 自然数を定義して 1 + 1 = 2 を証明する
+
 inductive MyNat where
   | zero
   | succ (n : MyNat)
